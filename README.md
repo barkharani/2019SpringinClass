@@ -1,4 +1,4 @@
 # 2019SpringinClass
 
-## I am Barkha aka Chant
+## I am Barkha.
 ## This is my test file.
