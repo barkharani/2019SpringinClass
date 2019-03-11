@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -56,7 +57,7 @@
 
         <main role="main" class="container">
         <div class="jumbotron">
-            <h1 @click="textClick"> {{which_class}} is the best </h1>
+            <h1 @click="textClick"> {{which_animal}} is correct </h1>
 
             <ul class="list-group">
                 <li class="list-group-item" v-for="img in imgs" @click="choosePicture(img)">
@@ -65,11 +66,11 @@
             </ul>
 
             <div class="form-group">
-                    <label for="exampleInputEmail1">Which class is the best?</label>
-                    <input v-model="which_class" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter best class">
+                    <label for="exampleInputEmail1">What are the animals in boxes?</label>
+                    <input v-model="which_animal" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter best class">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-            <div class="alert alert-success" v-if="which_class == 'This' || which_class == 'Web Programming'">
+            <div class="alert alert-success" v-if="which_animal == 'Tiger' || which_animal == 'Dog' || which_animal =='Eagle'">
                 Correct
             </div>
             <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport.</p>
@@ -85,12 +86,12 @@
             el: '#app',
             data: {
                 message: 'This is the best class ever!',
-                which_class: "",
+                which_animal: "",
                 imgs: [
-                "https://media3.s-nbcnews.com/j/newscms/2019_06/2746901/190208-el-paso-al-1422_a5f393a9a2565b391cd537c4b0708fa1.focal-580x290.jpg",
-                "https://a57.foxnews.com/hp.foxnews.com/images/2019/02/1280/533/a8d87114fe17bf8bdd548e7799c73f69.png?tl=1&ve=1",
-                "https://cdn.cnn.com/cnnnext/dam/assets/171230105658-01-iranian-student-protests-exlarge-tease.jpg"
-                ],
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjQHVVo8bqse6i2nA7QY4yjFA4ug5p5V3HU6qfv93ZDgqGrDOw",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe0ub78kIqvmA13W9Sr6VdDcu0ciXwScvgKgDKQuitqLAQoUxJng",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-X4VhL4b-8_3-y4_WIyq9B113iQ_waZ9ngvRlTVy8FEKyRE-r"
+                ],    
                 cur_img: "",
                 i_cur_img: -1
             },
