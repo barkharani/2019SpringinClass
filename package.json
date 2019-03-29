@@ -10,16 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/barkharani/2019SpringinClass.git"
+    "url": "git+https://github.com/jewpaltz/2019SpringInClass.git"
   },
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.4",
+    "bootstrap": "^4.3.1",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "mysql": "^2.16.0",
-    "dotenv": "^6.2.0",
     "vue": "^2.6.6",
-    "vue-router": "^3.0.1",
-    "bootstrap": "^4.3.1"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
