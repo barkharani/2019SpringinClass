@@ -36,16 +36,6 @@
       </div>
     </div>
     </div>
-    <div class="col-lg-6">
-      <div class="card border-success" v-if="newUser">
-        <div class="card-body">
-          <h4 class="card-title">Congrats! You've Registered</h4>
-          <p class="card-text">
-            {{newUser.FirstName}} {{newUser.LastName}} 
-          </p>
-        </div>
-      </div>
-    </div>
 </div>
 </template>
 
@@ -53,7 +43,6 @@
 import { Globals } from "@/models/api";
 import { Login } from "@/models/users";
 import toastr from 'toastr';
-import 'toastr/build/toastr.css';
 export default {
     data: ()=> ({
         data: {},
@@ -63,13 +52,11 @@ export default {
         async submit(){
             try {
               const m = await Login(this.data);
-              this.newUser = m.user;
-              Globals.user = m.user;
-              Globals.token = m.token;
+              this.$router.push(Globals.redirectRoute)
               toastr.success("You've logged in successfully!")
             } catch (error) {
               Globals.errors.push(error);
-              toastr.error(error.msg);
+              toastr.error(error.message);
             }
         }
     }
